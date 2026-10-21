@@ -2,9 +2,9 @@ fun main() {
     var resposta: Int
     var numero1: Double
     var numero2: Double
-    println("Bem-vindo q calculadora!")
+    println("Bem-vindo a calculadora!")
     do {
-        println("\nEscolha a operaçao a ser realizada:")
+        println("\nEscolha a operacao a ser realizada:")
         println("Digite 0 para fechar a calculadora")
         println("Digite 1 para somar")
         println("Digite 2 para subtrair")
@@ -43,7 +43,11 @@ fun main() {
                 numero1 = readln().toDouble()
                 print("Digite o valor do segundo numero: ")
                 numero2 = readln().toDouble()
-                println("Resultado da divisao: %.2f".format(numero1 / numero2))
+                if(numero2 == 0.0){
+                  println("impossivel dividir por zero")
+                } else {
+                  println("Resultado da divisao: %.2f".format(numero1 / numero2))
+                }
                 println("Preparando nova operacao...")
             }
             0 -> {
